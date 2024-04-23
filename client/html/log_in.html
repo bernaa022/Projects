@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/log-in.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar ">
+      <div class="navbar__container animate__animated animate__pulse">
+        <a href="./index.html" id="navbar__logo">Lenda</a>
+        <div class="navbar__toggle" id="roupa-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="./index.html" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="./roupa.html" class="navbar__links" id="roupa-page">Roupa</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.html#about" class="navbar__links" id="about-page">Sobre nós</a>
+          </li>
+         
+          <li class="navbar__btn">
+            <a href="./log_in.html" class="button" id="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    
+
+    <!-- Log in Section -->
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="log_in.html" class="sign-in-form" method="POST">
+            <h2 class="title">Iniciar Sessão na Lenda</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Email" name="email"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Palavra-passe" name="password"/>
+            </div>
+            <button type="submit" value="Entrar" class="btn solid">
+              Entrar
+            </button>
+
+            <p class="social-text">Ou faça login com as suas redes sociais</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="registar" class="sign-up-form" method="POST">
+            <h2 class="title">Registar na Lenda</h2> 
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nome do Utilizador" name="name"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="email"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Palavra-passe" name="password"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Confirmar Palavra-passe" name="confirmpassword"/>
+            </div>
+            <button type="submit" class="btn">
+              Registar
+            </button>
+            <p class="social-text">Ou faça login com as suas redes sociais</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+             
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Novo Aqui ?</h3>
+            <p>
+              Regista-te gratuitamente para começares a poder usufruir dos melhores produtos aos melhores preços.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+            Clica aqui e Regista-te!
+            </button>
+          </div>
+          <img src="../videos/lenda.gif" class="image" style="width: 300px; height: 300px; border-radius: 50%;" alt="" />
+          
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>És um Lenda User? ?</h3>
+            <p>
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Iniciar Sessão
+            </button>
+          </div>
+          <img src="../videos/lenda.gif" class="image" style="width: 400px; height: 385px; border-radius: 50%;" alt="" />
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+
+   
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+
+<div class="content_footer flex">
+    <div class="footer__links">
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>Sobre nós</h2>
+          <a href="/sign__up">Login</a> <a href="/">Testemunhos</a>
+          <a href="/">Carreiras</a> <a href="/">Termos de Serviço</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Contactos</h2>
+          <a href="/">Contactos sede</a> <a href="/">Suporte</a>
+       
+        </div>
+      </div>
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>Videos</h2>
+          <a href="/">Embaixadores</a>
+          <a href="/">Agencia</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Redes Sociais</h2>
+          <a href="/">Instagram</a> <a href="/">Facebook</a>
+          <a href="/">Youtube</a> <a href="/">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <section class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo">
+          <a href="/" id="footer__logo">Lenda</a>
+        </div>
+        <p class="website__rights">© Lenda 2024. All rights reserved</p>
+        <div class="social__icons">
+          <a href="https://pt-pt.facebook.com/" class="social__icon--link" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/" class="social__icon--link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/" class="social__icon--link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://pt.linkedin.com/" class="social__icon--link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://twitter.com/" class="social__icon--link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
+<!--Content ends-->
+
+  
+
+
+    
+
+    <script async src="../js/index.js"></script>
+    <script async src="../js/log-in.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

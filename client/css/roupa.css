@@ -1,0 +1,541 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main__container{
+  width: 100vh;
+}
+.container{
+  
+  background: radial-gradient(ellipse at bottom, #09c0ee 0%, #001aff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+body{
+  font-family: arial;
+  color: white;
+}
+
+.banner{
+  position: absolute;
+  top: 0;
+  max-height: 20vh;
+  max-width: 100vw;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --dark: #0d1113;
+  --light: #fff;
+  --accent: #09c0ee;
+  --accent-dark: #09c0ee;
+  --secondary: #001aff;
+  --br: 1em;
+  --transition: transform 200ms cubic-bezier(0.21, 1, 0.81, 1);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  
+
+}
+.btn {
+  cursor: pointer;
+  border: 0;
+  border-radius: 100vw;
+  background-color: var(--secondary);
+  color: var(--light);
+  font-weight: bold;
+  padding: 8px 16px;
+}
+.cart{
+display: flex;
+background: -webkit-linear-gradient(to right, #09c0ee, rgb(29, 126, 253), #001aff);
+justify-content: center;
+align-items: center;
+padding: 0 1rem;
+width: 100%;
+}
+.hero {
+height: 920px;
+}
+.game {
+  position: relative;
+  width: 15.5em;
+  top: 50px;
+  
+
+}
+.streamers {
+  display: flex;
+}
+.streamers img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+.rank {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.25rem;
+ 
+  right: 1em;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 0.5em 0.5em 0.75em;
+  clip-path: polygon(100% 0, 100% 100%, 50% 85%, 0% 100%, 0 100%, 0% 0%);
+  transition: var(--transition);
+}
+.front {
+  transition: 250ms;
+}
+.front .thumbnail {
+  border-radius: var(--br);
+}
+.front .name {
+  font-size: 22px;
+  margin: 0.75em 0;
+}
+.front .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.front .streamers img {
+  border: 2px solid var(--dark);
+}
+.front .streamers img:nth-of-type(1) {
+  transform: translateX(50%);
+  z-index: 1;
+}
+.front .streamers img:nth-of-type(2) {
+  transform: translateX(25%);
+}
+.back {
+  opacity: 0;
+  position: absolute;
+  bottom: -2%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: translateY(35%);
+}
+.back .streaming-info {
+  columns: 2;
+  column-rule: 1px solid rgba(255, 255, 255, 0.25);
+}
+.back .game-stat {
+  font-size: 16px;
+  text-align: center;
+}
+.back .game-stat span {
+  font-size: 14px;
+  display: block;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #282e36;
+  transform: scale(0.2, 0.9);
+  opacity: 0;
+  border-radius: var(--br);
+}
+.game:hover .rank {
+  transform: translate(145%, -75%);
+}
+.game:hover .front {
+  transform: translateY(-30%) scale(0.85);
+}
+.game:hover .front .name {
+  animation: gameName 250ms forwards;
+}
+.game:hover .front .stats {
+  opacity: 0;
+}
+.game:hover .back {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 250ms ease, opacity 150ms linear;
+}
+.game:hover .back .streamers {
+  width: 100%;
+  justify-content: space-between;
+}
+.game:hover .back .streamers .streamer {
+  font-size: 14px;
+  text-align: center;
+}
+.game:hover .back .streamers .streamer .name {
+  font-weight: bold;
+}
+.game:hover .background {
+  transition: var(--transition), opacity 100ms linear;
+  opacity: 1;
+  transform: scale(1.4, 1.2);
+}
+/* Estilos Gerais */
+.button {
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+.cart_btn {
+background-color: #343a40;
+color: white;
+padding: 5px 10px; 
+border: none;
+cursor: pointer; 
+font-size: 14px; 
+border-radius: 4px; 
+position: relative; 
+margin-right: 0;
+transition: background-color 0.3s ease; 
+}
+.card .add-to-cart-btn {
+position: absolute; 
+bottom: 20px; /* Ajuste para posicionar acima do fundo do cartão */
+left: 50%; /* Posiciona no centro horizontalmente */
+transform: translateX(-50%); /* Centraliza o botão com base na sua largura */
+width: 90%; /* Largura do botão em relação ao cartão */
+padding: 15px; /* Espaçamento interno para tornar o botão mais proeminente */
+z-index: 3; 
+background-color: #28a745; /* Cor de fundo verde */
+color: white; 
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+border-radius: 5px; /* Bordas arredondadas para o botão */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+opacity: 0; /* Começa invisível e aparece ao passar o mouse sobre o cartão */
+}
+
+.card:hover .add-to-cart-btn {
+opacity: 1; /* Botão se torna visível quando o mouse está sobre o cartão */
+bottom: 30px; /* Levanta um pouco o botão para a animação */
+}
+.card .add-to-cart-btn:hover {
+background-color: #218838; /* Cor mais escura ao passar o mouse sobre o botão */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais proeminente */
+}
+.cart-display {
+background-color: #000000; /* Mudar para uma cor clara para um fundo mais limpo */
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+padding: 1rem;
+position: absolute;
+right: 20px;
+top: 80px;
+width: 350px;
+z-index: 100;
+font-family: 'Arial', sans-serif; /* Tipografia coerente */
+transform: translateY(-200%); /* Esconde o carrinho para cima, fora da tela */
+transition: transform 0.3s ease; /* Transição suave para aparecer e desaparecer */
+}
+
+/* Estilo quando .show é adicionado */
+.cart-display.show {
+transform: translateY(0); /* Desliza para baixo para mostrar */
+}
+
+.item-qty {
+display: inline-block;
+margin: 0 10px; /* Adicione margem para espaçamento */
+min-width: 20px; /* Certifique-se de que há espaço suficiente para números de dois dígitos */
+text-align: center; /* Centraliza o número de unidades */
+}
+
+.cart-items li {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 0.5rem;
+background: #000000; /* Fundo sutil para cada item */
+padding: 0.5rem;
+border-radius: 5px;
+}
+
+.cart-item-quantity {
+display: flex;
+align-items: center;
+}
+
+.quantity-btn {
+background-color: #007bff; /* Cor de destaque para os botões */
+color: white;
+border: none;
+padding: 0.3rem 0.6rem;
+margin: 0 5px;
+cursor: pointer;
+border-radius: 3px;
+font-weight: bold;
+}
+.quantity-btn:hover {
+background-color: #0056b3; /* Efeito ao passar o mouse */
+}
+
+.quantity-text {
+min-width: 30px;
+text-align: center;
+}
+/* Botão para aumentar a quantidade */
+.increase-qty {
+background-color: #28a745; /* Verde */
+color: white;
+/* Restante do seu CSS para o botão */
+}
+
+/* Botão para aumentar a quantidade - hover */
+.increase-qty:hover {
+background-color: #218838; /* Verde mais escuro */
+}
+
+/* Botão para diminuir a quantidade */
+.decrease-qty {
+background-color: #dc3545; /* Vermelho */
+color: white;
+/* Restante do seu CSS para o botão */
+}
+
+/* Botão para diminuir a quantidade - hover */
+.decrease-qty:hover {
+background-color: #c82333; /* Vermelho mais escuro */
+}
+
+
+.cart-total {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 1rem;
+font-weight: bold;
+border-top: 1px solid #ddd;
+padding-top: 1rem;
+font-size: 1.2rem; /* Tamanho maior para o total */
+}
+.cart-total-value {
+color: #28a745; /* Cor para destacar o valor total */
+}
+
+
+
+#cart-overlay {
+display: none; /* Escondido por padrão */
+position: fixed; /* Posicionamento fixo em relação à janela do navegador */
+top: 0; /* Alinhado ao topo */
+left: 0; /* Alinhado à esquerda */
+width: 100%; /* Largura total */
+height: 100%; /* Altura total */
+background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+z-index: 999; /* Z-index abaixo do painel do carrinho para permitir interação */
+}
+
+#cart-overlay.show {
+display: block; /* Exibe o overlay quando necessário */
+}
+
+
+.cart_btn:hover, .quantity-btn:hover {
+background-color: #23272b; /* Efeito ao passar o mouse nos botões */
+transition: background-color 0.2s; /* Suaviza a transição de cores */
+}
+
+/* Estilo para o botão Sign Up */
+.button {
+background-color: #007bff; /* Cor de fundo para o botão Sign Up */
+color: white; /* Cor do texto */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+.button:hover {
+background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+
+
+
+/* Estilo para o contador do carrinho */
+#cart-count {
+font-size: 16px;
+padding: 2px 5px;
+background-color: #dc3545; /* Cor de fundo para o contador */
+color: white; /* Cor do texto */
+border-radius: 10px; /* Bordas arredondadas */
+margin-left: 20px; /* Espaço à esquerda */
+vertical-align: middle; /* Alinhamento vertical */
+}
+#playPauseBtn {
+background-color: #3498db;
+color: #fff;
+font-size: 16px;
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+transition: background-color 0.3s;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#playPauseBtn:hover {
+background-color: #2980b9;
+}
+
+#playPauseBtn i {
+margin-right: 8px;
+}
+
+/* Animação de pulsação para o botão do carrinho quando houver itens */
+.has-items {
+animation: pulse 1s infinite;
+}
+@keyframes pulse {
+0% {
+  transform: scale(1) translateX(0%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+50% {
+  transform: scale(1.05) translateX(0%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+100% {
+  transform: scale(1) translateX(0%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+}
+
+
+
+/* Corrige o problema de sobreposição da navbar */
+.navbar__item {
+display: inline-block;
+margin-right: 10px; /* Adiciona um espaçamento entre os itens */
+}
+
+.navbar__links {
+text-decoration: none;
+color: #fff; /* Escolha uma cor que combine com o seu esquema de cores */
+}
+
+.navbar__links:hover {
+color: #ccc; /* Cor ao passar o mouse */
+}
+
+@keyframes gameName {
+  0% {
+    text-align: left;
+    opacity: 1;
+ }
+  20% {
+    text-align: left;
+    opacity: 0;
+ }
+  50% {
+    text-align: center;
+    opacity: 0;
+    transform: scale(1.2);
+ }
+  100% {
+    text-align: center;
+    opacity: 1;
+ }
+}
+
+
+
+
+.wrapper {
+  height: 460px;
+  width:1300px;
+  margin: 190px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 30px;
+}
+
+
+.card {
+  margin: 10px;
+  height: 460px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  
+  transition: 0.3s ease-in;
+  }
+
+
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    height: 920px;
+    width: 740px;
+    margin-top: 50px;
+  
+  }
+  }
+  
+  @media screen and (max-width: 768px) {
+  .wrapper {
+    height: 2100px;
+    width: 400px;
+    grid-gap: -150px;
+  }
+  }
+  @media screen and (max-width: 420px) {
+    .wrapper {
+      height: 2000px;
+    }
+    }
+
+  .services_roupa{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding: 0rem 0;
+  }
+
+
+.card .content {
+position: relative; 
+z-index: 2;
+}
+
+
+.card:hover .content {
+opacity: 0.7; 
+}
+
+.card .content, .card .add-to-cart-btn {
+transition: opacity 0.3s ease;
+}

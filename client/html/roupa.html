@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenda</title>
+    <link rel="stylesheet" href="../css/roupa.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link	href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
+    
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar ">
+      <div class="navbar__container animate__animated animate__pulse">
+        <a href="index.html" id="navbar__logo">Lenda</a>
+        <div class="navbar__toggle" id="roupa-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="roupa.html" class="navbar__links" id="roupa-page">Roupa</a>
+          </li>
+          <li class="navbar__item">
+            <a href="index.html#about" class="navbar__links" id="about-page">Sobre nós</a>
+          </li>
+         
+          <li class="navbar__btn">
+            <a href="log_in.html" class="button" id="signup">Sign Up</a>
+          </li>
+          <li class="navbar__item,navbar__links">
+            <button class="cart_btn"id="show-cart-btn">Carrinho</button>
+            <div id="cart-display" class="cart-display">
+              <ul id="cart-items" class="cart-items">
+                <!-- Itens do carrinho serão inseridos aqui -->
+              </ul>
+              <div class="cart-total">
+                <span>Total: </span>
+                <span id="cart-total-value">$0</span>
+              </div>
+            </div>
+          </li>
+          <span id="cart-count">0</span>
+          </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    
+  
+
+    <!-- Hero Section -->
+
+
+    <video id="background-video" loop preload="auto">
+      <source src="../videos/adidas.mp4" type="video/mp4">
+    </video>
+    
+    <button id="playPauseBtn" onclick="playPause()">
+      <i class="fas fa-play"></i>Play/Pause
+    </button>
+    <div class="hero" id="home">
+      <div class="hero__container">
+        <h1 class="hero__heading" style=" -webkit-text-stroke: 2px black; color: aqua;">Escolhe a Melhor <span>Roupa</span></h1>
+        <p class="hero__description">Roupa Disponível ou para Reserva</p>
+      </div>
+    </div>
+
+    <div class="services_roupa" id = "buy">
+      
+
+
+        <div class="container" >
+          <div class="wrapper">
+            <div class="card">
+        	<div class="game">
+            <div class="rank">1</div>
+            
+            <div class="front">
+              <img class="thumbnail" src="../images/lenda.png" alt="img" >
+              <button class="add-to-cart-btn" data-product="Camisola Lenda" data-price="50€">Adicionar ao Carrinho</button>
+              <h3 class="name">Camisola Lenda</h3>
+              <div class="stats">
+                <p class="viewers">Comprado por 5.000 lendas</p>
+                <div class="streamers">
+                  <img src="https://picsum.photos/128/125" alt="img">
+                  <img src="https://picsum.photos/128/126" alt="img">
+                  <img src="https://picsum.photos/128/127" alt="img">
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="streaming-info">
+                <p class="game-stat">10.341<span>Viram este produto</span></p>
+                <p class="game-stat">5.200<span>Meteram no carrinho de compras</span></p>
+              </div>
+              
+              <div class="streamers">				
+                <div class="streamer">
+                  <div class="icon"><img src="https://picsum.photos/128/125" alt=""></div>
+                  <p class="name">João Ruivo</p>
+                  <p class="number">5 estrelas</p>
+                </div>
+                <div class="streamer">
+                  <div class="icon"><img src="https://picsum.photos/128/126" alt=""></div>
+                  <p class="name">Mohammed</p>
+                  <p class="number">5 estrelas</p>
+                </div>
+                <div class="streamer">
+                  <div class="icon"><img src="https://picsum.photos/128/127" alt=""></div>
+                  <p class="name">Julieta</p>
+                  <p class="number">5 estrelas</p>
+                </div>
+              </div>
+            </div>
+            <div class="background"></div>
+          </div>
+        
+
+
+         
+          
+          
+            </div>
+            <div class="card" >
+              <div class="game">
+                <div class="rank">2</div>
+                <div class="front">
+                  <img class="thumbnail" src="../images/lenda4.png" alt="img">
+                  <button class="add-to-cart-btn" data-product="Sapatilhas Lenda" data-price="120€">Adicionar ao Carrinho</button>
+                  <h3 class="name">Sapatilhas Lenda</h3>
+                  <div class="stats">
+                    <p class="viewers">Comprado por 3.420 lendas</p>
+                    <div class="streamers">
+                      <img src="https://picsum.photos/128/100" alt="img">
+                      <img src="https://picsum.photos/128/101" alt="img">
+                      <img src="https://picsum.photos/128/102" alt="img">
+                    </div>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="streaming-info">
+                    <p class="game-stat">7.869<span>Viram este produto</span></p>
+                    <p class="game-stat">3.640<span>Meteram no carrinho de compras</span></p>
+                  </div>
+                
+                  <div class="streamers">				
+                    <div class="streamer">
+                      <div class="icon"><img src="https://picsum.photos/128/100" alt=""></div>
+                      <p class="name">Ronaldo</p>
+                      <p class="number">5 estrelas</p>
+                    </div>
+                    <div class="streamer">
+                      <div class="icon"><img src="https://picsum.photos/128/101" alt=""></div>
+                      <p class="name">Bernardo</p>
+                      <p class="number">4.7 estrelas</p>
+                    </div>
+                    <div class="streamer">
+                      <div class="icon"><img src="https://picsum.photos/128/102" alt=""></div>
+                      <p class="name">Viktor</p>
+                      <p class="number">4.3 estrelas</p>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="background"></div>
+              </div>
+            
+    
+    
+             
+              
+              
+                </div>
+                <div class="card" >
+                  <div class="game">
+                    <div class="rank">3</div>
+                    
+                    <div class="front">
+                      <img class="thumbnail" src="../images/lenda2.png" alt="img">
+                      <button class="add-to-cart-btn" data-product="Camisola Lenda V2" data-price="68€">Adicionar ao Carrinho</button>
+                      <h3 class="name">Camisola Lenda</h3>
+                      <div class="stats">
+                        <p class="viewers">Comprado por 1400 lendas</p>
+                        <div class="streamers">
+                          <img src="https://picsum.photos/128/110" alt="img">
+                          <img src="https://picsum.photos/128/111" alt="img">
+                          <img src="https://picsum.photos/128/112" alt="img">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="streaming-info">
+                        <p class="game-stat">5.200<span>Viram este produto</span></p>
+                        <p class="game-stat">1.023<span>Meteram no carrinho de compras</span></p>
+                      </div>
+                      
+                      <div class="streamers">				
+                        <div class="streamer">
+                          <div class="icon"><img src="https://picsum.photos/128/10" alt=""></div>
+                          <p class="name">Ramiro</p>
+                          <p class="number">5 Estrelas</p>
+                        </div>
+                        <div class="streamer">
+                          <div class="icon"><img src="https://picsum.photos/128/11" alt=""></div>
+                          <p class="name">Ricardo</p>
+                          <p class="number">5 Estrelas</p>
+                        </div>
+                        <div class="streamer">
+                          <div class="icon"><img src="https://picsum.photos/128/12" alt=""></div>
+                          <p class="name">Viktor</p>
+                          <p class="number">5 Estrelas</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="background"></div>
+                  </div>
+
+                    </div>
+
+                    
+                  <div class="card" >
+                    <div class="game">
+                      <div class="rank">4</div>
+                      
+                      <div class="front">
+                        <img class="thumbnail" src="../images/lenda3.png" alt="img">
+                        <button class="add-to-cart-btn" data-product="T-Shirt Lenda" data-price="25€">Adicionar ao Carrinho</button>
+                        <h3 class="name">T-shirt Lenda</h3>
+                        <div class="stats">
+                          <p class="viewers">Comprado por 1000 lendas</p>
+                          <div class="streamers">
+                            <img src="https://picsum.photos/128/110" alt="img">
+                            <img src="https://picsum.photos/128/111" alt="img">
+                            <img src="https://picsum.photos/128/112" alt="img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="streaming-info">
+                          <p class="game-stat">2.150<span>Viram este produto</span></p>
+                          <p class="game-stat">834<span>Meteram no carrinho de compras</span></p>
+                        </div>
+                        
+                        <div class="streamers">				
+                          <div class="streamer">
+                            <div class="icon"><img src="https://picsum.photos/128/117" alt=""></div>
+                            <p class="name">Roberto</p>
+                            <p class="number">5 Estrelas</p>
+                          </div>
+                          <div class="streamer">
+                            <div class="icon"><img src="https://picsum.photos/128/118" alt=""></div>
+                            <p class="name">José Costa</p>
+                            <p class="number">5 Estrelas</p>
+                          </div>
+                          <div class="streamer">
+                            <div class="icon"><img src="https://picsum.photos/128/119" alt=""></div>
+                            <p class="name">Miguel Santos</p>
+                            <p class="number">5 Estrelas</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="background"></div>
+                    </div>
+                    
+          </div>
+          </div>
+        </div>
+      </div>
+      
+   
+
+   
+
+        
+
+    <!-- Footer Section -->
+
+  
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+
+<div class="content_footer flex">
+    <div class="footer__links">
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>Sobre nós</h2>
+          <a href="/sign__up">Login</a> <a href="/">Testemunhos</a>
+          <a href="/">Carreiras</a> <a href="/">Termos de Serviço</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Contactos</h2>
+          <a href="/">Contactos sede</a> <a href="/">Suporte</a>
+       
+        </div>
+      </div>
+      <div class="footer__link--wrapper">
+        <div class="footer__link--items">
+          <h2>Videos</h2>
+          <a href="/">Embaixadores</a>
+          <a href="/">Agencia</a>
+        </div>
+        <div class="footer__link--items">
+          <h2>Redes Sociais</h2>
+          <a href="/">Instagram</a> <a href="/">Facebook</a>
+          <a href="/">Youtube</a> <a href="/">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <section class="social__media">
+      <div class="social__media--wrap">
+        <div class="footer__logo">
+          <a href="/" id="footer__logo">Lenda</a>
+        </div>
+        <p class="website__rights">© Lenda 2023. All rights reserved</p>
+        <div class="social__icons">
+          <a href="https://pt-pt.facebook.com/" class="social__icon--link" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/" class="social__icon--link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/" class="social__icon--link"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://pt.linkedin.com/" class="social__icon--link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://twitter.com/" class="social__icon--link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
+<!--Content ends-->
+
+
+
+
+
+
+<script src="../js/roupa.js"></script>
+
+
+  </body>
+</html>
